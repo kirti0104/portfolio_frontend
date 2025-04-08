@@ -16,9 +16,9 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-black shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-indigo-600">
+        <Link href="/" className="text-2xl font-bold text-white-600">
          Kirti Malik
         </Link>
 
@@ -28,7 +28,7 @@ const Header = () => {
             <Link
               key={link.name}
               href={link.path}
-              className="text-gray-700 hover:text-indigo-600 transition"
+              className="text-white-700 hover:text-indigo-600 transition"
             >
               {link.name}
             </Link>
@@ -37,7 +37,7 @@ const Header = () => {
 
         {/* Mobile Toggle Button */}
         <button
-          className="md:hidden text-gray-700"
+          className="md:hidden text-white-700"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
