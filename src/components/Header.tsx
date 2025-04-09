@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
+  { name: "Home", path: "#home" },
+  { name: "About", path: "#about" },
   { name: "Projects", path: "/projects" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
@@ -16,10 +16,11 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-black shadow-md sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-green-700 via-emerald-600 to-emerald-500 shadow-md sticky top-0 z-50">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-white-600">
-         Kirti Malik
+        <Link href="/" className="text-4xl font-extrabold text-white">
+          Kirti Malik
         </Link>
 
         {/* Desktop Nav */}
@@ -28,7 +29,7 @@ const Header = () => {
             <Link
               key={link.name}
               href={link.path}
-              className="text-white-700 hover:text-indigo-600 transition"
+              className="text-lg font-bold text-white hover:text-green-400 transition duration-200"
             >
               {link.name}
             </Link>
@@ -37,7 +38,7 @@ const Header = () => {
 
         {/* Mobile Toggle Button */}
         <button
-          className="md:hidden text-white-700"
+          className="md:hidden text-white"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -46,12 +47,12 @@ const Header = () => {
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
+        <div className="md:hidden px-4 pb-4 space-y-2 bg-purple-950">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.path}
-              className="block text-gray-700 hover:text-indigo-600 transition"
+              className="block text-white hover:text-green-400 transition"
               onClick={() => setMenuOpen(false)}
             >
               {link.name}
