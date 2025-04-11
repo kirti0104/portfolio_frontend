@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", path: "#home" },
-  { name: "About", path: "#about" },
+  { name: "Home", path: "" },
+  { name: "About", path: "/about" },
   { name: "Projects", path: "/projects" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
@@ -47,7 +47,7 @@ const Header = () => {
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2 bg-purple-950">
+        <div className="md:hidden px-4 pb-4 space-y-2 bg-green">
           {navLinks.map((link) => (
             <Link
               key={link.name}
