@@ -5,7 +5,8 @@ import React from 'react'
 const About = () => {
   return (
     <>
-      <div className="mx-auto mt-30 font-extrabold text-green-400">
+    <section id='about' className=" text-white py-12  px-6 md:px-20 ">
+             <div className="mx-auto mt-30 font-extrabold text-green-400">
           <h1 className="text-3xl text-center">ABOUT ME</h1>
           <h2 className="text-4xl md:text-4xl text-center font-bold text-green-200 mt-4">
               EXPERTISE IN MERN STACK
@@ -25,6 +26,8 @@ const About = () => {
             <li>Tools & Platforms: Git, GitHub, Postman, Vercel, Firebase</li>
       </ul>
     </div>
+    </section>
+
 
     </>
   )
